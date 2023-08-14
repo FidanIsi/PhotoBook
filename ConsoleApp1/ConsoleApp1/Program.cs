@@ -23,12 +23,8 @@
     }
 
     public class BigPhotoBook : PhotoBook
-    { 
-        public BigPhotoBook(int numPages)  
-        {
-            numPages = 64;
-            return;
-        }
+    {
+        public BigPhotoBook() : base(64) { }
     }
        
 
@@ -43,7 +39,7 @@
             PhotoBook photoBook2 = new PhotoBook(24);
             Console.WriteLine("Second photo book has " + photoBook2.GetNumberPages() + " pages.");
 
-            BigPhotoBook largePhotoBook = new BigPhotoBook(64);
+            BigPhotoBook largePhotoBook = new BigPhotoBook();
             Console.WriteLine("This big photo book has " + largePhotoBook.GetNumberPages() + " pages.");
         }
     }
